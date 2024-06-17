@@ -7,7 +7,6 @@ from os import environ
 from dotenv import load_dotenv
 
 load_dotenv()
-
 token = environ["TOKEN"]
 
 #from private.config import token
