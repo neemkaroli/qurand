@@ -30,7 +30,7 @@ async def on_message(message):
     await message.channel.send('Call me Rand! Call me names!')
 
     if 'rand' in message.content.lower():
-        await message.channel.send(f'If you call this {bot.user.name} bot names like:\n!absurd\n!begairat\nit will return a quote to prove you right!')
+        await message.channel.send(f'If you call this {bot.user.name} names like:\n!absurd\n!begairat\nit will return a quote to prove you right!')
 
     if 'absurd' in message.content.lower():
         f = open('absurdity.json')
