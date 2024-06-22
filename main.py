@@ -50,7 +50,7 @@ async def on_message(message):
         await message.channel.send(output1)
         await message.channel.send(output2)
 
-    if 'zalim' or 'cruel' in message.content.lower():
+    if 'zalim' in message.content.lower():
         f = open('cruelty.json')
         data = json.load()
         key = random.choice(list(data))
