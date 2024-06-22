@@ -27,10 +27,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    await message.channel.send('Call me Random names!')
+    await message.channel.send('Call me like:\nSTUPID\nDANGARR\nZALIM\nI will return a quote to prove you right!\nMore insults coming soon...')')
 
     if 'rand' in message.content.lower():
-        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nit will return a quote to prove you right!\nMore insults coming soon...')
+        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nit will return a quote to prove you right!\nMore insults coming soon...\n\n\n')
 
     if 'stupid' in message.content.lower():
         f = open('absurdity.json')
