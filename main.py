@@ -7,7 +7,7 @@ import random
 import os
 from dotenv import load_dotenv
 load_dotenv()
-discord_token = str(os.getenv('DISCORD_TOKEN'))
+tok = str(os.getenv('DISCORD_TOKEN'))
 
 
 intents = discord.Intents.default()
@@ -52,11 +52,11 @@ async def on_message(message):
 
     if 'zalim' in message.content.lower():
         f = open('cruelty.json')
-        data = json.load()
+        data = json.load(f)
         key = random.choice(list(data))
         output1 = key['description']
         output2 = key['url']
         await message.channel.send(output1)
         await message.channel.send(output2)
 
-bot.run(discord_token)
+bot.run(tok)
