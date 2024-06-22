@@ -28,7 +28,7 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    await message.channel.send('Call me Random! Call me names!')
+    await message.channel.send('Call me Random names!')
 
     if 'rand' in message.content.lower():
         await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nit will return a quote to prove you right!\nMore insults coming soon...')
