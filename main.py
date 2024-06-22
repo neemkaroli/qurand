@@ -7,7 +7,7 @@ import random
 import os
 from dotenv import load_dotenv
 load_dotenv()
-TOKEN = os.getenv('DISCORD_TOKEN')
+discord_token = str(s.getenv('DISCORD_TOKEN'))
 
 
 intents = discord.Intents.default()
@@ -59,4 +59,4 @@ async def on_message(message):
         await message.channel.send(output1)
         await message.channel.send(output2)
 
-bot.run(TOKEN)
+bot.run(discord_token)
