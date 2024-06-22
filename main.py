@@ -27,10 +27,10 @@ async def on_ready():
 async def on_message(message):
     if message.author == bot.user:
         return
-    await message.channel.send('Call me like:\nSTUPID\nDANGARR\nZALIM\nI will return a quote to prove you right!\nMore insults coming soon...')')
+    await message.channel.send('Call me like:\nSTUPID\nDANGARR\nZALIM\n\SMARTASS\nSHAMEFUL\nI will return a quote to prove you right!\nMore insults coming soon...')')
 
     if 'rand' in message.content.lower():
-        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nit will return a quote to prove you right!\nMore insults coming soon...\n\n\n')
+        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nSMARTASS\nSHAMEFUL\nit will return a quote to prove you right!\nMore insults coming soon...\n\n\n')
 
     if 'stupid' in message.content.lower():
         f = open('absurdity.json')
@@ -52,6 +52,24 @@ async def on_message(message):
 
     if 'zalim' in message.content.lower():
         f = open('cruelty.json')
+        data = json.load(f)
+        key = random.choice(list(data))
+        output1 = key['description']
+        output2 = key['url']
+        await message.channel.send(output1)
+        await message.channel.send(output2)
+
+    if 'smart' in message.content.lower():
+        f = open('science.json')
+        data = json.load(f)
+        key = random.choice(list(data))
+        output1 = key['description']
+        output2 = key['url']
+        await message.channel.send(output1)
+        await message.channel.send(output2)
+
+    if 'shame' in message.content.lower():
+        f = open('women.json')
         data = json.load(f)
         key = random.choice(list(data))
         output1 = key['description']
