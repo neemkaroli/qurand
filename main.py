@@ -7,7 +7,7 @@ import random
 import os
 from dotenv import load_dotenv
 load_dotenv()
-discord_token = str(s.getenv('DISCORD_TOKEN'))
+discord_token = str(os.getenv('DISCORD_TOKEN'))
 
 
 intents = discord.Intents.default()
