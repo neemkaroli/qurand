@@ -22,17 +22,18 @@ bot = discord.Client(intents=intents)
 @bot.event
 async def on_ready():
     print(f'{bot.user.name} has arrived!')
+    
 
 @bot.event
 async def on_message(message):
     if message.author == bot.user:
         return
-    await message.channel.send('Call me Rand! Call me names!')
+    await message.channel.send('Call me Random! Call me names!')
 
     if 'rand' in message.content.lower():
-        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nit will return a quote to prove you right!\nMore insults coming soon...')
+        await message.channel.send(f'If you call this {bot.user.name} names like:\nSTUPID\nDANGARR\nZALIM\nit will return a quote to prove you right!\nMore insults coming soon...')
 
-    if 'absurd' in message.content.lower():
+    if 'stupid' in message.content.lower():
         f = open('absurdity.json')
         data = json.load(f)
         key = random.choice(list(data))
@@ -41,9 +42,18 @@ async def on_message(message):
         await message.channel.send(output1)
         await message.channel.send(output2)
 
-    if 'begairat' in message.content.lower():
+    if 'dang' in message.content.lower():
         f = open('nikah.json')
         data = json.load(f)
+        key = random.choice(list(data))
+        output1 = key['description']
+        output2 = key['url']
+        await message.channel.send(output1)
+        await message.channel.send(output2)
+
+    if 'zalim' or 'cruel' in message.content.lower():
+        f = open('cruelty.json')
+        data = json.load()
         key = random.choice(list(data))
         output1 = key['description']
         output2 = key['url']
